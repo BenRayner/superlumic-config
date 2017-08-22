@@ -8,7 +8,6 @@
   with_items:
     - golang.org/x/tools/cmd/goimports
     - golang.org/x/tools/cmd/vet
-    - golang.org/x/tools/cmd/oracle
     - golang.org/x/tools/cmd/godoc
     - github.com/golang/lint/golint
     - github.com/nsf/gocode
