@@ -8,6 +8,3 @@ ControlPersist yes
 
 Host *
   UseKeychain yes
-
-Host *.settlemint.io
-   User root
