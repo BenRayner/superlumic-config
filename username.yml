@@ -34,9 +34,9 @@
     - golang
 
   vars:
-    - computername: benrayner
-    - git_user_name: Ben Rayner
-    - git_user_email: ben.rayner@versent.com.au
+    - computername: <computer_name>
+    - git_user_name: <full_name>
+    - git_user_email: <full_name>@versent.com.au
     - osx_defaults:
       - domain: 'com.apple.dock'
         key: 'autohide'
