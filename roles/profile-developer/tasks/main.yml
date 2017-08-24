@@ -1,5 +1,8 @@
 ---
 
+- name: tap versent/homebrew-taps
+  homebrew_tap: tap=versent/homebrew-taps state=present
+
 - name: install developer brew applications
   homebrew: name={{item}} state=latest
   with_items:
@@ -9,3 +12,4 @@
     - htop
     - watch
     - rsync
+    - saml2aws
