@@ -1,5 +1,8 @@
 ---
 
+- name: install homebrew cask
+  homebrew_tap: tap=caskroom/cask state=present
+
 - name: tap versent/homebrew-taps
   homebrew_tap: tap=versent/homebrew-taps state=present
 
