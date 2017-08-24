@@ -5,15 +5,15 @@ BRed='\e[1;31m'         # Red
 Color_Off='\e[0m'       # Text Reset
 
 function setStatusMessage {
-    printf "%s --> %s$1%s\n" "$BRed" "$BGreen" "$Color_Off" 1>&2
+    printf "${BRed} --> ${BGreen}$1${Color_Off}\n" 1>&2
 }
 
-printf "%s   _________                         .__                .__        %s\n" "$BGreen" "$Color_Off"
-printf "%s  /   _____/__ ________   ___________|  |  __ __  _____ |__| ____  %s\n" "$BGreen" "$Color_Off"
-printf "%s  \_____  \|  |  \____ \_/ __ \_  __ \  | |  |  \/     \|  |/ ___\ %s\n" "$BGreen" "$Color_Off"
-printf "%s  /        \  |  /  |_> >  ___/|  | \/  |_|  |  /  Y Y  \  \  \___ %s\n" "$BGreen" "$Color_Off"
-printf "%s /_______  /____/|   __/ \___  >__|  |____/____/|__|_|  /__|\___  >%s\n" "$BGreen" "$Color_Off"
-printf "%s         \/      |__|        \/ http://superlumic.com \/        \/ %s\n\n" "$BGreen" "$Color_Off"
+printf "${BGreen}   _________                         .__                .__        ${Color_Off}\n"
+printf "${BGreen}  /   _____/__ ________   ___________|  |  __ __  _____ |__| ____  ${Color_Off}\n"
+printf "${BGreen}  \_____  \|  |  \____ \_/ __ \_  __ \  | |  |  \/     \|  |/ ___\ ${Color_Off}\n"
+printf "${BGreen}  /        \  |  /  |_> >  ___/|  | \/  |_|  |  /  Y Y  \  \  \___ ${Color_Off}\n"
+printf "${BGreen} /_______  /____/|   __/ \___  >__|  |____/____/|__|_|  /__|\___  >${Color_Off}\n"
+printf "${BGreen}         \/      |__|        \/ http://superlumic.com \/        \/ ${Color_Off}\n\n"
 
 setStatusMessage "Checking if we need to ask for a sudo password"
 
@@ -26,7 +26,7 @@ if [ ! -z "$2" ]; then
 fi
 
 function triggerError {
-    printf "%s --> $1 %s\n" 1>&2 "$BRed" "$Color_Off"
+    printf "${BRed} --> $1 ${Color_Off}\n" 1>&2
     exit 1
 }
 
