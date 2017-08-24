@@ -30,8 +30,8 @@
         dest: /etc/ssh/ssh_config
 
   roles:
-    - golang
     - profile-developer
+    - golang
 
   vars:
     - computername: benrayner

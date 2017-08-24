@@ -14,7 +14,6 @@
     - github.com/rogpeppe/godef
     - github.com/zmb3/gogetdoc
     - github.com/ramya-rao-a/go-outline
-    - sourcegraph.com/sqs/goreturns
     - github.com/tpng/gopkgs
     - github.com/acroca/go-symbols
     - golang.org/x/tools/cmd/guru
