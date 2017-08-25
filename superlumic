@@ -71,7 +71,8 @@ if [[ ! -f "/Library/Developer/CommandLineTools/usr/bin/clang" ]]; then
     install_clt
 fi
 
-# Install Homebrew
+# Install Homebrew. Brew is installed indepedently from Ansible
+# in order to avoid installing Homebrew under pip
 if ! which brew >/dev/null 2>&1
 then
     setStatusMessage "Install Homebrew"
@@ -113,10 +114,5 @@ if [ -f "config/$username.yml" ]; then
     setStatusMessage "Running the ansible playbook for $username"
     ansible-playbook -i "localhost," config/"$username.yml"
 else
-    if [ "travis" = "$username" ]; then
-        setStatusMessage "Running the ansible playbook for $username but use roderik.yml as fallback"
-        ansible-playbook -i "localhost," config/roderik.yml
-    else
-        triggerError "No playbook for $username found"
-    fi
+    triggerError "No playbook for $username found"
 fi
