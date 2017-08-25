@@ -15,7 +15,7 @@ The Superlumic utility will install the following utilities and Ansible roles pr
 https://versent.atlassian.net/wiki/spaces/BR/pages/114556998/Development+Environment+Setup+with+Superlumic+and+Ansible
 
 ## Quick Start
-1. Clone the repo and modify the "username.yml", replacing username with the intended username for the target MacOS machine.
+1. Clone the repo and modify the "username.yml", replacing username with the intended username of the target MacOS machine.
 2. Merge the modified "username.yml"
 3. On the target developer machine, retrieve the superlumic bash script with curl.
 ```
